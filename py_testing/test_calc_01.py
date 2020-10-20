@@ -55,3 +55,10 @@ class TestCalc:
     def test_div_zero(self, a, b):
         with pytest.raises(ZeroDivisionError):
             self.calc.div(a, b)
+
+    # 笛卡尔积
+    @pytest.mark.parametrize('a', [1, 2, 3])
+    @pytest.mark.parametrize('b', [4, 5, 6])
+    @pytest.mark.parametrize('c', [7, 8, 9])
+    def test_cartesian_product(self, a, b, c):
+        print(a, b, c)
