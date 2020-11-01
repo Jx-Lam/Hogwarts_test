@@ -26,7 +26,7 @@ class TestWeiXin:
 
         self.driver.find_element(By.CSS_SELECTOR, '.index_service_cnt_itemWrap:nth-child(2)').click()
         self.driver.find_element(By.CSS_SELECTOR, ".ww_fileImporter_fileContainer_uploadInputMask").send_keys(
-            r"D:\code\project\hogwarts_test\web\addressbook.xlsx")
+            r"D:\code\project\hogwarts_test\web\address.xlsx")
         # 断言
         filename = self.driver.find_element(By.CSS_SELECTOR, ".ww_fileImporter_fileContainer_fileNames").text
         assert filename == 'address.xlsx'
