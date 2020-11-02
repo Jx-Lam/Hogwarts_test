@@ -4,11 +4,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from Hogwarts.web.po_test.web_page.contact_page import ContactPage
+from web.po_test.web_page.contact_page import ContactPage
 
 
 class HomePage:
-    def __int__(self):
+    def __init__(self):
         options = Options()
         options.debugger_address = "127.0.0.1:9222"
         self.driver = webdriver.Chrome(options=options)

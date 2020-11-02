@@ -9,11 +9,11 @@ class TestWeixin:
     #     pass
 
     def test_home_add(self):
-        username = "a8"
-        account = "13600000008"
-        phone = "13600000008"
+        username = "a10"
+        account = "13600000010"
+        phone = "13600000010"
 
         member = self.home.goto_memberedit()
         member.member_edit(username, account, phone)
 
-        assert username in member.get_member()
+        assert phone in member.get_member()
