@@ -16,4 +16,4 @@ class TestWeixin:
         member = self.home.goto_memberedit()
         member.member_edit(username, account, phone)
 
-        assert phone in member.get_member()
+        assert phone in member.get_member(username)

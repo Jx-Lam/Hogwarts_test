@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.common.exceptions import NoSuchElementException
 
 
 class BasePage:
@@ -23,3 +24,18 @@ class BasePage:
 
     def finds(self, by, locator):
         return self.driver.find_elements(by, locator)
+
+    # # 封装一个函数，用来判断属性值是否存在
+    # def isElementPresent(self, by, value):
+    #     """
+    #     用来判断元素标签是否存在，
+    #     """
+    #     try:
+    #         element = self.driver.find_element(by=by, value=value)
+    #     # 原文是except NoSuchElementException, e:
+    #     except NoSuchElementException as e:
+    #         # 发生了NoSuchElementException异常，说明页面中未找到该元素，返回False
+    #         return False
+    #     else:
+    #         # 没有发生异常，表示在页面中找到了该元素，返回True
+    #         return True
