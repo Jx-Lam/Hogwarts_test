@@ -9,7 +9,7 @@ class BasePage:
 
     def __init__(self, driver: WebDriver = None):
         if driver == None:
-            # 第一次初始化
+            # 第一次初始化  chrome --remote-debugging-port=9222
             options = Options()
             options.debugger_address = "127.0.0.1:9222"
             self.driver = webdriver.Chrome(options=options)
